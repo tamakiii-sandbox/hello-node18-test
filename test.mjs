@@ -10,10 +10,17 @@ describe('my test', () => {
   });
 
   it('true', () => {
+    stack.count++;
     assert(true);
   })
 
   it('is object', () => {
+    stack.count++;
     assert(stack.constructor.name == 'MyStack')
+  })
+
+  it('beforeEach', () => {
+    stack.count++;
+    assert(stack.count == 1)
   })
 })
